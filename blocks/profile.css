@@ -8,6 +8,7 @@
   margin-right: 20px;
   height: 190px;
   width: 190px;
+  border-radius: 8px;
 }
 
 .profile__column {
@@ -70,13 +71,14 @@
   width: 157px;
   height: 52px;
   background-color: #212121;
-  color: #fcf5e5/;
+  color: #fcf5e5;
   display: flex;
   gap: 8px;
   justify-content: center;
   align-items: center;
   border-radius: 8px;
   cursor: pointer;
+  border: 0;
 }
 
 .profile__add-btn:hover {
@@ -103,7 +105,6 @@
   }
 
   .profile__description {
-    font-size: 20px;
     margin: 0 0 32px;
     max-width: 288px;
   }
