@@ -17,3 +17,5 @@ This project allowed students the chance to build upon the lessons taught in the
 This webpage is deployed to Github Pages
 
 -[Deployment Link:](https://cravis5.github.io/se_project_spots/)
+
+-[Video submission Link:](https://www.loom.com/share/d92fc9c470bc4c96bcc4d132a0749841)

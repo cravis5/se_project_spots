@@ -105,6 +105,7 @@
   }
 
   .profile__description {
+    font-size: 16px;
     margin: 0 0 32px;
     max-width: 288px;
   }
@@ -118,5 +119,9 @@
     margin: 0;
     width: 100%;
     max-width: 288px;
+  }
+
+  .profile__edit-btn {
+    align-self: center;
   }
 }
