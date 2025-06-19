@@ -38,11 +38,11 @@
   position: absolute;
   top: 32px;
   right: 50px;
-  width: 40px;
-  height: 40px;
+  width: 23px;
+  height: 23px;
   opacity: 40%;
   color: #212121;
-  border: 2px solid #212121;
+  border: none;
   padding: 0;
   background-color: transparent;
   display: flex;
@@ -56,6 +56,7 @@
   border: none;
   top: 0;
   right: -52.5px;
+  background-position: center;
 }
 
 .modal__close:hover {
@@ -138,10 +139,13 @@
 }
 
 .modal__caption {
+  font-family: Poppins, Arial, Helvetica, sans-serif;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 20px;
   margin-top: 12px;
-  text-align: center;
+  text-align: left;
+  background-color: #212121;
+  border-radius: 8px;
 }
 
 
@@ -157,11 +161,13 @@
   }
 
   .modal__close {
-    border: 2px solid #212121;
+    border: none;
     top: 22px;
     right: 12px;
-    width: 32px;
-    height: 32px;
+  }
+
+  .modal__caption{
+    font-size: 16px;
   }
 
   .modal__form {
@@ -190,6 +196,7 @@
     right: 0;
   }
   .modal__image {
+    max-width: 288px;
     min-width: unset;
   }
 }

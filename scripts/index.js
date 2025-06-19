@@ -113,12 +113,9 @@ newPostCloseBtn.addEventListener("click", function () {
    closeModal(newPostModal);
 });
 
-previewModal.addEventListener("click", function (evt) {
-  if (evt.target === previewModal) {
+previewModal.addEventListener("click", function () {
    closeModal(previewModal);
-  }
 });
-
 
 function handleEditProfileSubmit(evt) {
   evt.preventDefault();
