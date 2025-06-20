@@ -75,6 +75,7 @@
 }
 
 .modal__title {
+  margin: 0;
   font-weight: 500;
   font-size: 32px;
 }
@@ -136,6 +137,7 @@
   object-fit: contain;
   display: block;
   border-radius: 8px;
+  padding: 4px;
 }
 
 .modal__caption {
@@ -143,20 +145,24 @@
   color: #ffffff;
   font-size: 20px;
   margin-top: 12px;
+  margin-bottom: 0;
   text-align: left;
   background-color: #212121;
   border-radius: 8px;
+  object-fit: contain;
+  margin-bottom: 0;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-bottom: 4px;
+  padding-left: 8px;
 }
-
-
 
 @media screen and (max-width: 480px) {
-
   .modal__content {
-  padding: 22px 12px 12px;
-}
+    padding: 22px 12px 12px;
+  }
 
- .modal__title {
+  .modal__title {
     font-size: 20px;
   }
 
@@ -166,7 +172,7 @@
     right: 12px;
   }
 
-  .modal__caption{
+  .modal__caption {
     font-size: 16px;
   }
 
@@ -191,7 +197,7 @@
 
 @media screen and (max-width: 627px) {
   /* Placed below the 480px media query to avaoid being overwritten */
-  .modal__close_type_preview  {
+  .modal__close_type_preview {
     top: -48px;
     right: 0;
   }
