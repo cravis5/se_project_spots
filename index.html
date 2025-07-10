@@ -3,9 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="A responsive photo gallery app for posting and previewing scenic spots." />
+    <meta
+      name="description"
+      content="A responsive photo gallery app for posting and previewing scenic spots."
+    />
     <meta name="author" content="Arcravius Wilson" />
-    <meta name="keywords" content="HTML, CSS, JavaScript, gallery, modal, responsive design" />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript, gallery, modal, responsive design"
+    />
     <link rel="stylesheet" href="pages/index.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <title>Spots</title>
@@ -50,10 +56,16 @@
       <footer class="footer">
         <p class="footer__copyright">2025 &copy; Spots</p>
       </footer>
-      <div class="modal" id="edit-profile-modal" role="dialog" aria-modal="true" aria-labelledby="edit-profile-title">
+      <div
+        class="modal"
+        id="edit-profile-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="edit-profile-title"
+      >
         <div class="modal__content">
-          <button type="button" class="modal__close">
-            <img src="./images/X-btn.svg" alt="X-btn" />
+          <button type="button" class="modal__close" aria-label="Close modal">
+            <img src="./images/X-btn.svg" alt="" aria-hidden="true" />
           </button>
           <h2 class="modal__title" id="edit-profile-title">Edit profile</h2>
           <form class="modal__form" id="edit-profile-form" novalidate>
@@ -68,7 +80,7 @@
                 maxlength="40"
                 required
               />
-              <span id="profile-name-input-error" class="modal__error">ERROR!!!</span>
+              <span id="profile-name-input-error" class="modal__error"></span>
             </label>
             <label for="profile-description-input" class="modal__label">
               Description
@@ -81,13 +93,22 @@
                 maxlength="200"
                 required
               />
-              <span id="profile-description-input-error" class="modal__error"></span>
+              <span
+                id="profile-description-input-error"
+                class="modal__error"
+              ></span>
             </label>
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>
         </div>
       </div>
-      <div class="modal" id="new-post-modal" role="dialog" aria-modal="true" aria-labelledby="new-post-title">
+      <div
+        class="modal"
+        id="new-post-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="new-post-title"
+      >
         <div class="modal__content">
           <div class="modal__header">
             <h2 class="modal__title" id="new-post-title">New Post</h2>
@@ -127,13 +148,19 @@
       </div>
     </div>
 
-    <div class="modal modal_type_preview" id="preview-modal" role="dialog" aria-modal="true" aria-labelledby="preview-title">
+    <div
+      class="modal modal_type_preview"
+      id="preview-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Image preview"
+    >
       <div class="modal__image-container">
         <button
           type="button"
           class="modal__close modal__close_type_preview"
-          aria-label="Close preview modal">
-        </button>
+          aria-label="Close preview modal"
+        ></button>
         <img src="#" alt="" class="modal__image" />
         <p class="modal__caption"></p>
       </div>
