@@ -29,6 +29,7 @@ const initialCards = [
   },
 ];
 
+const allModals = document.querySelectorAll(".modal");
 const editProfileBtn = document.querySelector(".profile__edit-btn");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileCloseBtn = editProfileModal.querySelector(".modal__close");
@@ -38,7 +39,7 @@ const editProfileDescriptionInput = document.querySelector(
   "#profile-description-input"
 );
 
-const newPostbtn = document.querySelector(".profile__new-post-btn");
+const newPostBtn = document.querySelector(".profile__new-post-btn");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostCloseBtn = newPostModal.querySelector(".modal__close");
 const newPostForm = newPostModal.querySelector(".modal__form");
@@ -70,7 +71,7 @@ function getCardElement(data) {
 
   const cardLikeBtnEl = cardElement.querySelector(".card__like-button");
   cardLikeBtnEl.addEventListener("click", () => {
-    cardLikeBtnEl.classList.toggle("card__like-button_active")
+    cardLikeBtnEl.classList.toggle("card__like-button_active");
   });
 
   const cardDeleteBtnEl = cardElement.querySelector(".card__delete-button");
@@ -87,13 +88,22 @@ function getCardElement(data) {
 
   return cardElement;
 }
+function handleEsc (evt) {
+  const currentModal = document.querySelector(".modal_is-opened");
+ if (evt.key === "Escape") {
+  closeModal (currentModal);
+ }
+}
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+  document.addEventListener("keydown", handleEsc);
 }
+
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  document.removeEventListener("keydown", handleEsc);
 }
 
 editProfileBtn.addEventListener("click", function () {
@@ -107,7 +117,7 @@ editProfileCloseBtn.addEventListener("click", function () {
   closeModal(editProfileModal);
 });
 
-newPostbtn.addEventListener("click", function () {
+newPostBtn.addEventListener("click", function () {
   resetValidation(newPostForm, settings);
   openModal(newPostModal);
 });
@@ -118,6 +128,12 @@ newPostCloseBtn.addEventListener("click", function () {
 
 previewModal.addEventListener("click", function () {
    closeModal(previewModal);
+});
+
+allModals.forEach(modal => {
+  modal.addEventListener("mousedown", e => {
+    if (e.target === modal) closeModal(modal);
+  });
 });
 
 function handleEditProfileSubmit(evt) {
@@ -131,7 +147,7 @@ editProfileForm.addEventListener("submit", handleEditProfileSubmit);
 
 function handleNewPostSubmit(evt) {
   evt.preventDefault();
-  disableButton(newPostSubmitBtn, settings);
+  disableButton(newPostSubmitBtn);
 
   const inputValues = {
    name: newPostCaptionInput.value,
