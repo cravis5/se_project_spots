@@ -89,8 +89,8 @@ function getCardElement(data) {
   return cardElement;
 }
 function handleEsc (evt) {
-  const currentModal = document.querySelector(".modal_is-opened");
  if (evt.key === "Escape") {
+   const currentModal = document.querySelector(".modal_is-opened");
   closeModal (currentModal);
  }
 }
@@ -118,7 +118,7 @@ editProfileCloseBtn.addEventListener("click", function () {
 });
 
 newPostBtn.addEventListener("click", function () {
-  resetValidation(newPostForm, settings);
+  // resetValidation(newPostForm, settings);
   openModal(newPostModal);
 });
 
@@ -126,7 +126,7 @@ newPostCloseBtn.addEventListener("click", function () {
    closeModal(newPostModal);
 });
 
-previewModal.addEventListener("click", function () {
+previewModalCloseBtn.addEventListener("click", function () {
    closeModal(previewModal);
 });
 
@@ -147,7 +147,7 @@ editProfileForm.addEventListener("submit", handleEditProfileSubmit);
 
 function handleNewPostSubmit(evt) {
   evt.preventDefault();
-  disableButton(newPostSubmitBtn);
+  disableButton(newPostSubmitBtn, settings);
 
   const inputValues = {
    name: newPostCaptionInput.value,

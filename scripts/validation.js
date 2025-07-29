@@ -2,7 +2,7 @@ const settings = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
   submitButtonSelector: ".modal__submit-btn",
-  inactiveButtonClass: "modal__button_disabled",
+  inactiveButtonClass: "modal__submit-btn_disabled",
   inputErrorClass: "modal__input_type_error",
   errorClass: "modal__error_visible"
 }
@@ -38,7 +38,7 @@ const hasInvalidInput = (inputList) => {
 const toggleButtonState = (inputList, buttonEl, config) =>{
   if (hasInvalidInput(inputList)) {
     disableButton(buttonEl, config);
- } else {
+  } else {
     buttonEl.disabled = false;
     buttonEl.classList.remove(config.inactiveButtonClass);
   }
